@@ -18,10 +18,10 @@ namespace WebOne.Controllers
         }
 
         // GET api/values/5
-        [HttpGet("{id}")]
+        [HttpGet("{id:int}")]   // if not int => page not found error
         public ActionResult<string> Get(int id)
         {
-            return "value";
+            return $"value : {id}";
         }
 
         // POST api/values
